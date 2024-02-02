@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sendbird_chat_sdk/sendbird_chat_sdk.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -195,6 +196,7 @@ class _HomePageState extends State<HomePage> {
     });
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 5.h,
         backgroundColor: Colors.black,
         leading: Icon(
           Icons.arrow_back_ios,
@@ -210,6 +212,9 @@ class _HomePageState extends State<HomePage> {
           Icon(
             Icons.menu,
             color: Colors.white,
+          ),
+          SizedBox(
+            width: 10,
           )
         ],
       ),
@@ -252,8 +257,8 @@ class _HomePageState extends State<HomePage> {
                           width: 5,
                         ),
                         Container(
-                          height: 50,
-                          width: 330,
+                          height: 6.h,
+                          width: 85.w,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               border: Border.all(color: secondaryColor)),
@@ -265,6 +270,7 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                 child: TextFormField(
                                   style: TextStyle(color: Colors.grey),
+                                  decoration: InputDecoration(),
                                   controller: _messageController,
                                   onChanged: (value) {
                                     setState(() {
@@ -402,7 +408,7 @@ class MessageCard extends StatelessWidget {
                           height: 10,
                         ),
                         Container(
-                          constraints: BoxConstraints(maxWidth: 240),
+                          constraints: BoxConstraints(maxWidth: 55.w),
                           child: Text(
                             message,
                             style: TextStyle(color: Colors.white, fontSize: 15),
