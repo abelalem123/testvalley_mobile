@@ -270,7 +270,10 @@ class _HomePageState extends State<HomePage> {
                               Expanded(
                                 child: TextFormField(
                                   style: TextStyle(color: Colors.grey),
-                                  decoration: InputDecoration(),
+                                  decoration: InputDecoration(
+                                    border: InputBorder
+                                        .none, // Remove the underline
+                                  ),
                                   controller: _messageController,
                                   onChanged: (value) {
                                     setState(() {
