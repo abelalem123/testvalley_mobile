@@ -253,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Container(
                           height: 50,
-                          width: 360,
+                          width: 330,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
                               border: Border.all(color: secondaryColor)),
